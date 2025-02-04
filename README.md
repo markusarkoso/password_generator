@@ -1,14 +1,24 @@
-# ThinkArkoso Password Generator - useful in cybersecurity issues ;)
+# Password Generator
 
-A simple and secure Python-based password generator that supports both standard and grouped password formats.
+This program generates random passwords and offers two modes:
 
-## Features
-- Generate random passwords with customizable length.
-- Option to create grouped passwords (e.g., `abcdEf-ghIjKl-123456`).
-- Uses letters, digits, and only easy-to-type special characters (`$%&`).
+- **Grouped Mode (g):**  
+  Generates a password divided into several groups (default: 6 characters per group).  
+  Example: `ABCdef-GHIjkl-MNOprs`
 
-## Installation
-No external dependencies required. Just run the script with Python:
+- **String Mode (s):**  
+  Generates a continuous password string with a user-defined length.
 
-```bash
-python password_generator.py
+After generating the password, it is automatically copied to the clipboard using `pyperclip`.
+
+## Required Libraries
+
+- **Python 3**  
+  Make sure Python 3 is installed.
+
+- **pyperclip**  
+  Used to copy the password to the clipboard.
+
+  Install via pip:
+  ```bash
+  pip install pyperclip
