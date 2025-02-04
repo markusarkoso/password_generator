@@ -1,5 +1,6 @@
 import random
 import string
+import pyperclip
 
 
 def print_logo():
@@ -57,7 +58,9 @@ if __name__ == "__main__":
 
             # Im gruppierten Modus verwenden wir fest definierte 6 Zeichen pro Gruppe.
             password = generate_password(grouped=True, group_size=6, group_count=group_count)
-            print("Dein Passwort lautet:\n\n",password, "\n")
+            print("Dein Passwort lautet:\n\n", password, "\n")
+            pyperclip.copy(password)
+            print("Das Passwort wurde in die Zwischenablage kopiert.")
 
         elif mode == "s":
             try:
@@ -67,7 +70,9 @@ if __name__ == "__main__":
                 length = 12
 
             password = generate_password(length=length, grouped=False)
-            print("Dein Passwort lautet:\n\n",password, "\n")
+            print("Dein Passwort lautet:\n\n", password, "\n")
+            pyperclip.copy(password)
+            print("Das Passwort wurde in die Zwischenablage kopiert.")
 
         else:
             print("Ungültige Eingabe. Bitte wähle 'g' für gruppiert oder 's' für string.")
